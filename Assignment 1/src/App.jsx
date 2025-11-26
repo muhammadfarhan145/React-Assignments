@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Header from "./components/header/Header.jsx"
-import Hero from "./components/HomeHero/HomeHero.jsx"
-import AllCarsSec from "./components/AllCarsSec/AllCarsSec.jsx"
+import Main from "./components/main/Main.jsx"
 import Footer from "./components/footer/Footer.jsx"
 
 function App() {
@@ -11,8 +10,7 @@ function App() {
   return (
     <>
       <Header />
-      <Hero />
-      <AllCarsSec />
+      <Main />
       <Footer />
     </>
   )

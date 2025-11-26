@@ -1,0 +1,29 @@
+.counterDisplay {
+    background-color: #8082ee;
+    padding: 60px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 40px 40px;
+}
+
+.counterDisplay p {
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+}
+
+.buttons {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.button {
+    background-color: #8082ee;    padding: 20px 35px;
+    border-radius: 15px;
+    border: none;
+    font-size: 22px;
+    color: #fff;
+}

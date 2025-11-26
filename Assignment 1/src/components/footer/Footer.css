@@ -1,41 +1,10 @@
 footer {
-    margin-top: 100px;
-    background-color: #95a4ac;
-    padding: 50px 0;
-}
-
-.footerSectionContainer {
-    display: flex;
-    width: 100%;
-    gap: 1px;
-    padding: 0 50px;
-}
-
-.footerSections {
-    padding: 20px 0 0;
-    width: 25%;
+    background-color: #8082ee;
     text-align: center;
-}    
-
-.sectionTitle {
-    font-size: 20px;
-    font-weight: 600;
+    padding: 15px;
 }
 
-.footer_Ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-
-.nav-link {
-    padding: 7px;
-    letter-spacing: 1px;
-}
-
-.footerSocialIcons {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    padding: 0;
+footer p {
+    margin: 0;
+    text-align: center;
 }
