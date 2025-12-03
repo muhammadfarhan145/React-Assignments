@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-x: hidden;
+  background-color: #667eea;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.login-image {
+  min-height: 600px;
+  position: relative;
+  height: 100%;
+}
+
+.login-image::before {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background: rgba(11, 94, 215, 0.85);
+}
+
+.login-form-container {
+  padding: 60px 50px;
+}
+
+.login-logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.btn-login {
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  transition: transform 0.3s;
+  background: #0d6efd !important;
+}
+
+.message_P {
+    color: red;
+    text-align: center;
+}
+
+.role-selection {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.role-card {
+  flex: 1;
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.role-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  transform: translateY(-3px);
+}
+
+.role-card.active {
+  border-color: #667eea;
+}
+
+.roleCardImg {
+  width: 40px;
+  height: 35px;
+}
+
+@media (max-width: 768px) {
+  .login-image {
+    min-height: 300px;
+  }
+  .login-form-container {
+    padding: 40px 30px;
+  }
+
+  .role-selection {
+    flex-direction: column;
+  }
+}
