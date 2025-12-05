@@ -4,10 +4,19 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 import { supabase } from '../supabaseClient.js'; 
 import homeHeroImage from "../../public/assets/homeHero-image.jpeg"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
   const navigate = useNavigate();
   const signOutButtonRef = useRef(null);
+
+  useEffect(() =>{
+          AOS.init({
+            duration: 1000,
+            once: true,
+          })
+      })
 
   const checkUser = async () => {
     const { data: { session } } = await supabase.auth.getSession();

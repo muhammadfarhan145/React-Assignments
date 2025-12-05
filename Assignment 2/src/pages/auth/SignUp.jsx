@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./SignUp.css";
 import { Link } from 'react-router-dom'
 import SignUpImg from "../../../public/assets/signUp-image.jpeg";
 import { supabase } from '../../../src/supabaseClient.js'; 
 import { useNavigate } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SignUp = () => {
     const [email, setEmail] = useState("");
@@ -13,6 +15,13 @@ const SignUp = () => {
     const [passwordConfirm, setPasswordConfirm] = useState("");
     const [phone, setPhone] = useState("");
     const navigate = useNavigate();
+
+    useEffect(() =>{
+        AOS.init({
+            duration: 1000,
+            once: true
+        })
+    })
 
     const registerUser = async (e) => {
         e.preventDefault();

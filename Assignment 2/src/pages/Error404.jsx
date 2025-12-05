@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom' 
 import "./Error404.css"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Error404 = () => {
+    useEffect(() =>{
+        AOS.init({
+            duration: 1000,
+            once: true
+        })
+    })
   return (
     <div className="not-found-container">
         <h1 className="error-code" data-aos="fade-down" data-aos-delay="200">404</h1>

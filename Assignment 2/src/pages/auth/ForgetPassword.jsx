@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom' 
 import "./ForgetPassword.css"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const ForgetPassword = () => {
+    useEffect(() =>{
+        AOS.init({
+            duration: 1000,
+            once: true
+        })
+    })
   return (
     <div className="forgot-password-container">
         <div className="card" data-aos="fade-up" data-aos-duration="800">

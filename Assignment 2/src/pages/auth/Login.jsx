@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Login.css";
 import { Link } from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
 import { supabase } from '../../../src/supabaseClient.js'; 
 import studentIcon from "../../../public/assets/studentIcon.png";
 import LoginImg from "../../../public/assets/login-image.jpeg";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -12,6 +14,13 @@ const Login = () => {
     const [message, setMessage] = useState("");
     const [role, setRole] = useState("student");
     const navigate = useNavigate();
+
+    useEffect(() =>{
+        AOS.init({
+            duration: 1000,
+            once: true
+        })
+    })
 
     const checkUser = async () => {
         const { data: { session } } = await supabase.auth.getSession();
